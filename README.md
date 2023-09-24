@@ -20,7 +20,6 @@ We used SQL Server Management Studio 2019 for viewing and hosting our local Data
 When trying to use this application on your machine:
 1. please DO NOT clone this using the Visual studio github extension use Git Bash or Github Desktop.
 2. You will first need to run the SQL file in the SQL server mangement tool you use and take down the data source it should look something like: "localhost\sqlexpress"
-3. Then you will have to navigate to the NuGet Package Manager Console, which can be accessed through top tool bar Tools>NuGet Package Manager>Package Manager Console
-4. Once in the console you will have to enter the following command:
-- Scaffold-DbContext -Connection "Data Source={YOUR_OWN_SRC};Initial Catalog=TravelExperts;Integrated Security=True; TrustServerCertificate=True" -Provider Microsoft.EntityFrameworkCore.SqlServer -Context TravelExpertsContext -OutputDir Models -DataAnnotations -Force
+3. Navigate to Models folder in project files in the Solution explorer, find the "TravelExpertsContext.cs" file, at line 59 change the Data Source to your "localhost\sqlexpress".
+4. Save
 5. Now you should be able to run the project.
